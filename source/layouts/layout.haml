@@ -1,0 +1,51 @@
+!!!
+%html
+  %head
+    %meta{'http-equiv' => 'Content-Type',     content: 'text/html; charset=utf-8' }
+    %meta{'http-equiv' => 'Content-Language', content: 'en-us' }
+    %meta{name: 'viewport',                   content: 'width=device-width' }
+
+    %style{ :type => "text/css" }
+      = partial("stylesheets/mailer").to_s.html_safe
+
+  %body
+    %table.body
+      %tr
+        %td.center{align: "center", valign: "top"}
+          %center
+            %table.row.header
+              %tr
+                %td.center{align: "center"}
+                  %center
+                    %table.container
+                      %tr
+                        %td.wrapper.last
+                          %table.twelve.columns
+                            %tr
+                              %td.six.sub-columns
+                                %a{:href => '#'}
+                                  %img{alt: "Folyo", height: "30", src: "http://assets0.folyo.me/emails/logo-white.png", width: "67"}
+
+                              %td.six.sub-columns.last{style: "text-align:right; vertical-align:middle;"}
+                                %span.template-label
+                                  = link_to 'View this email in your browser', '#'
+                              %td.expander
+            %br/
+
+            %table.container
+              %tbody
+                %tr
+                  %td
+                    = yield
+
+                    / Footer
+                    %table.row.footer
+                      %tr
+                        %td.wrapper.last
+                          %table.twelve.columns
+                            %tr
+                              %td{align: "center"}
+                                %center
+                                  %p{style: "text-align:center;"}
+                                    %a{href: "http://folyo.me"} &copy; 2014 Folyo
+                              %td.expander

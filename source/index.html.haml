@@ -1,0 +1,83 @@
+%table.row
+  %tr
+    %td.wrapper.last
+      %table.twelve.columns
+        %tr
+          %td
+            .designer-message
+              Hi! I'm a designer and here is my message. 
+          %td.expander
+
+%table.row
+  %tr
+    %td.wrapper
+      %table.seven.columns
+        %tr
+          %td
+            %table.designer-profile
+              %tr
+                %td.designer-portrait
+                  %img{:src => '/images/ajay-avatar.jpg'}
+                %td.designer-data
+                  %h6.designer-name John Smith
+                  %p.designer-location San Francisco
+                %td.expander
+
+    %td.wrapper.last
+      %table.five.columns
+        %tr
+          %td
+            %table.wrapper.last.designer-actions
+              %tr
+                %td.six.sub-columns
+                  %table.button.shortlist
+                    %tr
+                      %td
+                        = link_to 'Shortlist', '#'
+                %td.six.sub-columns.last
+                  %table.button.hide
+                    %tr
+                      %td
+                        = link_to 'Hide', '#'
+                %td.expander
+            .view-full-profile
+              = link_to 'View Full Profile', '#'
+
+          %td.expander
+
+
+%table.row.designer-portfolio
+  %tr
+    %td.wrapper
+      %table.eight.columns
+        %tr
+          %td
+            = link_to '#', class: 'portfolio-sample image1' do
+              = image_tag 'http://assets3.folyo.me/designer_project_artworks/assets/52e6176df0ba6537e7000013/medium/Team-member-real_pixels_20(1).jpg?1390811036'
+          %td.expander
+
+    %td.wrapper.last
+      %table.four.columns
+        %tr
+          %td
+            = link_to '#', class: 'portfolio-sample image2' do
+              = image_tag 'http://assets0.folyo.me/designer_project_artworks/assets/52e6187df0ba65fd0600001d/medium/Minimal_Dashboard_Real_Pixels_20(1).jpg?1390811284'
+
+            = link_to '#', class: 'portfolio-sample image3' do
+              = image_tag 'http://assets1.folyo.me/designer_project_artworks/assets/52e61ae3f0ba6537e7000025/medium/Simulation-2---portofoliu-site.jpg?1390811880'
+
+          %td.expander
+
+.links
+  = @social_urls.each_slice(3) do |slice|
+    %table.row
+      %tr
+        - slice.each_with_index do |(key, url), index|
+          - if index == 2
+            - myClass = 'last'
+          %td.wrapper{ class: myClass }
+            %table.four.columns.link
+              %tr
+                %td= link_to key.to_s.capitalize, url
+        %td.expander
+
