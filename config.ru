@@ -17,6 +17,7 @@ end
 # Build the static site when the app boots
 `bundle exec middleman build`
 
+
 # Enable proper HEAD responses
 use Rack::Head
 # Attempt to serve static HTML files

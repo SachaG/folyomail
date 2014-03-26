@@ -10,15 +10,10 @@ gem "thin"
 gem "nokogiri"
 
 gem "middleman"
-gem "middleman-blog"
 gem "middleman-syntax"
 gem "middleman-livereload"
-gem "middleman-blog-drafts"
-gem "middleman-autoprefixer"
 
 gem "susy"
-gem "zurb-foundation"
-gem "redcarpet"
 gem "sanitize"
 
 # For feed.xml.builder

@@ -13,8 +13,6 @@ set :fonts_dir, 'fonts'
 
 set :build_dir, 'tmp'
 
-activate :autoprefixer
-
 activate :livereload
 
 activate :directory_indexes
